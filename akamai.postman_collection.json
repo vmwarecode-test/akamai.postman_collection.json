@@ -1,0 +1,78 @@
+{
+	"info": {
+		"_postman_id": "7167afbf-3329-4b34-99c0-c6c406591be1",
+		"name": "akamai",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Akamai invalidate",
+			"request": {
+				"auth": {
+					"type": "edgegrid",
+					"edgegrid": [
+						{
+							"key": "clientSecret",
+							"value": "{{AKAMAI_CLIENT_SECRET}}",
+							"type": "string"
+						},
+						{
+							"key": "clientToken",
+							"value": "{{AKAMAI_CLIENT_TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "{{AKAMAI_ACCESS_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"objects\": [\r\n          \"cache-docs\"\r\n     ]\r\n}"
+				},
+				"url": {
+					"raw": "https://akab-xbu3omobd42okvyn-uoj5uukhvq7cpza3.luna.akamaiapis.net/ccu/v3/invalidate/tag/production",
+					"protocol": "https",
+					"host": [
+						"akab-xbu3omobd42okvyn-uoj5uukhvq7cpza3",
+						"luna",
+						"akamaiapis",
+						"net"
+					],
+					"path": [
+						"ccu",
+						"v3",
+						"invalidate",
+						"tag",
+						"production"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Fast purging cache by tag"
+			},
+			"response": []
+		}
+	]
+}

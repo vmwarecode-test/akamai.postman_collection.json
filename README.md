@@ -1,1 +1,0 @@
-# akamai.postman_collection.json
